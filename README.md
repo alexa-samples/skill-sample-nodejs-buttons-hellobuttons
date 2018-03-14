@@ -22,7 +22,7 @@ This sample skill uses:
 * [Step 6: Add Publishing Information](#step-6-add-publishing-information)
 * [Step 7: Add Privacy and Compliance Information](#step-7-add-privacy-and-compliance-information)
 * [Step 8: Enable the Skill in the Alexa App](#step-8-enable-the-skill-in-the-alexa-app)
-* [Step 9: Invoke the Skill](##step-9-invoke-the-skill)
+* [Step 9: Invoke the Skill](#step-9-invoke-the-skill)
 
 ## Hello Buttons Skill Flow
 When the Hello Buttons skill begins, it will send [animation directives](https://developer.amazon.com/docs/gadget-skills/control-echo-buttons.html#animate) for the three possible trigger events (`buttonDown`, `buttonUp` and `none`) to all the Echo Buttons. Alexa will then ask you to press the buttons, and she will start reading [lorem ipsum](https://www.lipsum.com/).
