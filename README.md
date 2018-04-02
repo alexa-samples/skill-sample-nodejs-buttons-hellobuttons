@@ -30,18 +30,18 @@ This sample skill uses:
 ## Hello Buttons Skill Flow
 When the Hello Buttons skill begins, it will send [animation directives](https://developer.amazon.com/docs/gadget-skills/control-echo-buttons.html#animate) for the three possible trigger events (`buttonDown`, `buttonUp` and `none`) to all the Echo Buttons. Alexa will then ask you to press the buttons, and she will start reading [lorem ipsum](https://www.lipsum.com/).
 
-When you press a button, the skill will interrupt Alexaâ€™s speech. If the button that you pressed is not awake, the skill will initialize the button by sending animation directives for `buttonDown`, `buttonUp` and `none` to that button. This is different from the original `LaunchRequest` intent, which sent initialization directives to all buttons.
+When you press a button, the skill will interrupt Alexa's speech. If the button that you pressed is not awake, the skill will initialize the button by sending animation directives for `buttonDown`, `buttonUp` and `none` to that button. This is different from the original `LaunchRequest` intent, which sent initialization directives to all buttons.
 
-If the pressed button wakes up, you will see a different color on `buttonDown` and `buttonUp` events, as well as a breathing animation for the `none` event. If you cancel the skill (for example, by saying â€œAlexa, cancelâ€) or the Input Handler expires, the buttons will fade from white to black.
+If the pressed button wakes up, you will see a different color on `buttonDown` and `buttonUp` events, as well as a breathing animation for the `none` event. If you cancel the skill (for example, by saying "Alexa, cancel" or the Input Handler expires, the buttons will fade from white to black.
 
 ## Preparation
 Before you create the Hello Buttons skill, you must take the following steps:
 
-* **Create an Amazon developer account** â€“ If you donâ€™t already have an Amazon developer account, go to the [developer portal](https://developer.amazon.com/edw/home.html#/) and select **Sign In** in the upper right to create a free account.
+* **Create an Amazon developer account** If you don't already have an Amazon developer account, go to the [developer portal](https://developer.amazon.com/edw/home.html#/) and select **Sign In** in the upper right to create a free account.
 
-* **Sign up for AWS** â€“ If you havenâ€™t already, sign up for AWS by going to [AWS Free Tier](https://aws.amazon.com/free/). For most developers, the [AWS Lambda Free Tier](https://aws.amazon.com/lambda/pricing/) is sufficient for the function that supports an Alexa skill.
+* **Sign up for AWS** If you haven't already, sign up for AWS by going to [AWS Free Tier](https://aws.amazon.com/free/). For most developers, the [AWS Lambda Free Tier](https://aws.amazon.com/lambda/pricing/) is sufficient for the function that supports an Alexa skill.
 
-* **Get Echo Buttons** â€“ This skill requires two [Echo Buttons](https://www.amazon.com/Echo-Buttons-Alexa-Gadget-Pack/dp/B072C4KCQH/).
+* **Get Echo Buttons** This skill requires two [Echo Buttons](https://www.amazon.com/Echo-Buttons-Alexa-Gadget-Pack/dp/B072C4KCQH/).
 
 ## Step 1: Create the Deployment Package
 
