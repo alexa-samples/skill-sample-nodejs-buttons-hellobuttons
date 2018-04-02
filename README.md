@@ -156,7 +156,6 @@ Continuing from the previous step, do the following:
 6. For **Testing Instructions**, enter `None`.
 7. At the bottom of the page, select **Save and continue**.
 8. Again, select **Save and continue** to accept the default options on the **Availability** page.
-
    You should now be on the **Submission** page, which will tell you that fixes are required (to add icons). You don't need to add icons now because you can test the skill without submitting it for certification.
 
 ## Step 10: Enable the Skill in the Alexa App
