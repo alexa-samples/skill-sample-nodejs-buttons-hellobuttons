@@ -15,8 +15,7 @@
     demonstrates how to send directives to, and receive events from, Echo Buttons.
  **/
 
-
- 'use strict';
+'use strict';
 
  const Alexa = require('alexa-sdk');
 
@@ -101,16 +100,15 @@
      this.response._addDirective(buildButtonUpAnimationDirective([]));
 
      // Have Alexa say something in the standard way.
-     this.response.speak("Welcome to the Hello Buttons skill. Press your Echo Buttons to change "
-      + "the colors of the lights. I'll keep talking so that you can interrupt me. Lorem ipsum "
-      + "dolor sit ahmet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut "
-      + "labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation "
-      + "ullamco laboris nisi ut aliquip ex ea commodo consequat.");
+     this.response.speak("Welcome to the Hello Buttons skill. Press your Echo Buttons to change " 
+                         + "the colors of the lights. I'll keep talking so that you can interrupt me. "
+                         + "Lorem ipsum dolor sit ahmet, consectetur adipiscing elit, sed do eiusmod "
+                         + "tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, "
+                         + "quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.");
 
      // Deleting `shouldEndSession` will keep the session open, but NOT open the microphone.
      // You could also set `shouldEndSession` to false if you also wanted a voice intent.
-     // Never set `shouldEndSession` to true if you're expecting
-     // Input Handler events -- you'll lose the session!
+     // Never set `shouldEndSession` to true if you're expecting Input Handler events -- you'll lose the session!
      delete this.handler.response.response.shouldEndSession;
 
      // We'll use the manual mechanism to end the response, because we've modified the response directly.
