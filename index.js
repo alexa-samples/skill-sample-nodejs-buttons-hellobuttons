@@ -15,8 +15,7 @@
     demonstrates how to send directives to, and receive events from, Echo Buttons.
  **/
 
-
- 'use strict';
+'use strict';
 
  const Alexa = require('alexa-sdk');
 
@@ -429,4 +428,3 @@
      "originatingRequestId": inputHandlerOriginatingRequestId
    }
  };
- 
