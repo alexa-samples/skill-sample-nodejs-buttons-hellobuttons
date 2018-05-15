@@ -171,15 +171,6 @@
              // Say something when we first encounter a button.
              this.response.speak('Hello button ' + this.attributes.buttonCount + ". Good to see you. <audio src='https://s3.amazonaws.com/ask-soundlibrary/foley/amzn_sfx_rhythmic_ticking_30s_01.mp3'/>");
 
-             /*
-               This setting has no effect because Echo Buttons currently always
-               interrupt text-to-speech, but this setting may be used to control
-               this behavior in the future. If your Skill depends on
-               Echo Buttons interrupting text-to-speech, leave this in.
-             */
-             this.handler.response.response.outputSpeech.playBehavior = 'REPLACE_ALL';
-           }
-
            console.log(JSON.stringify(this.handler.response));
 
            // Once more, we finish with this because we directly manipulated the response.
