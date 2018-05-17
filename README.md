@@ -6,7 +6,7 @@
 **Important: The Gadgets Skill API is in beta and is subject to change at any time without notice. We welcome your feedback.**
 
 
-These instructions show how to create a simple skill called Hello Buttons. This skill demonstrates how to send directives to, and receive events from, Echo Buttons.
+These instructions show how to create a simple skill called Hello Buttons. This skill demonstrates how to send directives to, and receive events from, [Echo Buttons](https://www.amazon.com/Echo-Buttons-Alexa-Gadget-Pack/dp/B072C4KCQH).
 
 **Note:** Hello Buttons demonstrates how to use the Gadget interfaces ([GameEngine](https://developer.amazon.com/docs/gadget-skills/gameengine-interface-reference.html) and [GadgetController](https://developer.amazon.com/docs/gadget-skills/gadgetcontroller-interface-reference.html)). It is not intended to be a comprehensive example. For an end-to-end skill, please refer to the Color Changer skill in the [Alexa Github](https://github.com/alexa/skill-sample-nodejs-buttons-colorchanger).
 
