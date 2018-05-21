@@ -248,7 +248,7 @@
      console.log('StopIntent');
      this.response.speak('Thank you for using the Gadgets Test Skill.  Goodbye.');
      if (this.attributes.inputHandler_originatingRequestId !== undefined) {
-       this.response._addDirective(buttonStopIntpuHandlerDirective(this.attributes.inputHandler_originatingRequestId));
+       this.response._addDirective(buttonStopInputHandlerDirective(this.attributes.inputHandler_originatingRequestId));
      }
      this.handler.response.response.shouldEndSession = true;
      console.log(JSON.stringify(this.handler.response));
@@ -258,7 +258,7 @@
      console.log('CancelIntent');
      this.response.speak('Thank you for using the Gadgets Test Skill.  Goodbye.');
      if (this.attributes.inputHandler_originatingRequestId !== undefined) {
-       this.response._addDirective(buttonStopIntpuHandlerDirective(this.attributes.inputHandler_originatingRequestId));
+       this.response._addDirective(buttonStopInputHandlerDirective(this.attributes.inputHandler_originatingRequestId));
      }
      this.handler.response.response.shouldEndSession = true;
      console.log(JSON.stringify(this.handler.response));
@@ -414,7 +414,7 @@
     because we kept the requestId when we started this InputHandler.  It's always
     a good idea to clean up when your Skill's session ends.
  */
- const buttonStopIntpuHandlerDirective = function(inputHandlerOriginatingRequestId) {
+ const buttonStopInputHandlerDirective = function(inputHandlerOriginatingRequestId) {
    return {
      "type": "GameEngine.StopInputHandler",
      "originatingRequestId": inputHandlerOriginatingRequestId
