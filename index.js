@@ -170,7 +170,7 @@
            if (isNewButton) {
              // Say something when we first encounter a button.
              this.response.speak('Hello button ' + this.attributes.buttonCount + ". Good to see you. <audio src='https://s3.amazonaws.com/ask-soundlibrary/foley/amzn_sfx_rhythmic_ticking_30s_01.mp3'/>");
-
+           }
            console.log(JSON.stringify(this.handler.response));
 
            // Once more, we finish with this because we directly manipulated the response.
