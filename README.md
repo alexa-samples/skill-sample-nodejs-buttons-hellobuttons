@@ -60,11 +60,13 @@ $ git clone https://github.com/alexa/skill-sample-nodejs-buttons-hellobuttons/
 2. Install npm dependencies by running the npm command `npm install` from the directory of the repo you just cloned in the previous step.
 
 ```bash
-$ cd skill-sample-nodejs-buttons-hellobuttons
+$ cd skill-sample-nodejs-buttons-hellobuttons/lambda/custom
 $ npm install
 ```
 
 3. Create an archive to upload to AWS Lambda.
+
+Make sure to execute the following in the `lambda/custom` directory:
 
 ```bash
 $ zip -r -X ../HelloButtonsDeploymentPackage.zip *

@@ -1,0 +1,56 @@
+{
+    "manifest": {
+      "publishingInformation": {
+        "locales": {
+          "en-US": {
+            "summary": "Hello Buttons",
+            "examplePhrases": [
+              "Alexa, open hello buttons",
+              "Alexa, launch hello buttons"
+            ],
+            "keywords": [
+              "Alexa Gadgets API",
+              "Echo Buttons"        
+            ],            
+            "name": "hello buttons",
+            "description": "This is an example skill to show how to use the Alexa Gadgets API"
+          }
+        },
+        "isAvailableWorldwide": true,
+        "testingInstructions": "Open the skill and press connected Echo Buttons to see lights animate",
+        "category": "GAMES",
+        "distributionCountries": [],
+        "gadgetSupport": {
+          "requirement": "REQUIRED",
+          "numPlayersMin": 1,
+          "numPlayersMax": 1,
+          "minGadgetButtons": 1,
+          "maxGadgetButtons": 4
+        }
+      },
+      "apis": {
+        "custom": {
+          "endpoint": {
+            "sourceDir": "lambda/custom"
+          },
+          "interfaces": [
+            {
+              "type": "GAME_ENGINE"
+            },
+            {
+              "type": "GADGET_CONTROLLER"
+            }
+          ]
+        }
+      },
+      "manifestVersion": "1.0",
+      "privacyAndCompliance": {
+        "allowsPurchases": false,
+        "usesPersonalInfo": false,
+        "isChildDirected": false,
+        "isExportCompliant": true,
+        "containsAds": false
+      }
+    }
+  }
+  
