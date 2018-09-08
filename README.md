@@ -80,15 +80,15 @@ In this step, you upload create an archive of the skill code and supporting modu
 3. Select **Create function**.
 4. Select **Author from scratch**.
 5. For **Name**, enter `HelloButtons`.
-6. For **Runtime**, select **Node.js 6.10**.
+6. For **Runtime**, select **Node.js 8.10**.
 7. For **Role**, select **Create new role from template(s)**.
 8. For **Role name**, enter `HelloButtonsRole`.
 9. From the **Policy templates** list, select **Simple Microservice permissions**.
 10. In the lower right, click the **Create function** button. The function might take a moment to create.
 11. Under the **Function code** section, for **Code entry type**, select **Upload a .ZIP file**. Then click **Upload** and choose the ``HelloButtonsDeploymentPackage.zip`` file.
-12. For **Runtime**, select **Node.js 6.10**.
-13. Under the **Designer** section, under **Add triggers**, select the **Alexa Skills Kit** option, and
-then select the **Add** button in the lower right.
+12. For **Runtime**, select **Node.js 8.10**.
+13. Under the **Designer** section, under **Add triggers**, select the **Alexa Skills Kit** option, select
+**Disable** under **Skill ID verification** and then select the **Add** button in the lower right.
 14. At the top of the page, select **Save**.
 
 ## Step 3: Find the ARN of the Lambda function
@@ -103,8 +103,9 @@ Next, create the skill in the developer console by using the following steps:
 
 1. Sign in to the [Alexa Skills Kit developer console](https://developer.amazon.com/alexa/console/ask).
 2. Select **Create Skill**.
-3. For **Skill Name**, enter **Hello Buttons**, and then select **Next** in the upper right.
+3. For **Skill Name**, enter **Hello Buttons**.
 4. For **Choose a model to add to your skill**, select **Custom**, and then select **Create Skill** in the upper right.
+5. For **Choose a template**, select **Start from scratch**, and then select **Choose** in the upper right.
 
 ***Important: If you get an 'unspecified error' when performing any of the remaining steps, try logging out and then logging back in to the developer console.***
 
@@ -143,7 +144,7 @@ Continuing from the previous step, do the following:
 
 Continuing from the previous step, do the following:
 
-1. At the top of the page, select **Launch**.
+1. At the top of the page, select **Distribution**.
 2. For **One Sentence Description** and **Detailed Description**, enter `This is a sample skill for Echo Buttons.`
 3. For **Example Phrases**, enter `Alexa, open Hello Buttons`.
 4. For **Echo Button Use**, select **Required**.
