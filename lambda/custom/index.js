@@ -32,6 +32,7 @@ exports.handler = function (event, context) {
           main.HelpIntentHandler,
           main.StopAndCancelIntentHandler,          
           main.SessionEndedRequestHandler,
+          main.FallbackHandler,
           main.DefaultHandler
       )
       .addResponseInterceptors(main.ResponseInterceptor)
@@ -56,7 +57,7 @@ const main = {
       const sessionAttributes = attributesManager.getSessionAttributes();
       
       // Build a basic response and have Alexa say something in the standard way.
-      var response = handlerInput.responseBuilder
+      let response = handlerInput.responseBuilder
         .speak("Welcome to the Gadgets Test Skill. " + 
                "Press your Echo Buttons to change the colors of the lights. " + 
                "<audio src='https://s3.amazonaws.com/ask-soundlibrary/foley/amzn_sfx_rhythmic_ticking_30s_01.mp3'/>")
@@ -146,6 +147,24 @@ const main = {
       return response;  
     }  
   },
+    FallbackHandler: {
+        canHandle(handlerInput) {
+            const { request } = handlerInput.requestEnvelope;
+            const intentName = request.intent ? request.intent.name : '';
+            console.log("main.HelpIntentHandler: checking if it can handle "
+                + request.type + " for " + intentName);
+            return request.type === 'IntentRequest'
+                && intentName === 'AMAZON.FallbackIntent';
+        },
+        handle(handlerInput) {
+            console.log("Global.FallbackHandler: handling unknown request.");
+            var response = handlerInput.responseBuilder
+                .speak(`Sorry I did not get that, try again? `)
+                .getResponse();
+            delete response.shouldEndSession;
+            return response;
+        }
+    },
   StopAndCancelIntentHandler: {
     canHandle(handlerInput) {
         const { request } = handlerInput.requestEnvelope;

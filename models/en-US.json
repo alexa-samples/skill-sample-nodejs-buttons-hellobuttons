@@ -4,10 +4,19 @@
             "invocationName": "hello buttons",
             "intents": [
                 {
-                    "name": "AMAZON.CancelIntent",
+                    "name": "HelloIntent",
+                    "slots": [],
                     "samples": [
-                        "cancel"
+                        "hello"
                     ]
+                },
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
                 },
                 {
                     "name": "AMAZON.HelpIntent",
@@ -16,9 +25,13 @@
                 {
                     "name": "AMAZON.StopIntent",
                     "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
                 }
-            ]
+            ],
+            "types": []
         }
     }
 }
-  
