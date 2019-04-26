@@ -2,12 +2,12 @@
 
 ## Hello Buttons Skill
 
-**Important: The Gadgets Skill API is in beta and is subject to change at any time without notice. We welcome your feedback.**
+**Important: The Echo Buttons Skill API is in beta and is subject to change at any time without notice. We welcome your feedback.**
 
 
 These instructions show how to create a simple skill called Hello Buttons. This skill demonstrates how to send directives to, and receive events from, [Echo Buttons](https://www.amazon.com/Echo-Buttons-Alexa-Gadget-Pack/dp/B072C4KCQH).
 
-**Note:** Hello Buttons demonstrates how to use the Gadget interfaces ([GameEngine](https://developer.amazon.com/docs/gadget-skills/gameengine-interface-reference.html) and [GadgetController](https://developer.amazon.com/docs/gadget-skills/gadgetcontroller-interface-reference.html)). It is not intended to be a comprehensive example. For an end-to-end skill, please refer to the [Color Changer sample](https://github.com/alexa/skill-sample-nodejs-buttons-colorchanger).
+**Note:** Hello Buttons demonstrates how to use the [GameEngine](https://developer.amazon.com/docs/echo-button-skills/gameengine-interface-reference.html) and [GadgetController](https://developer.amazon.com/docs/echo-button-skills/gadgetcontroller-interface-reference.html) skill interfaces. It is not intended to be a comprehensive example. For an end-to-end skill, please refer to the [Color Changer sample](https://github.com/alexa/skill-sample-nodejs-buttons-colorchanger).
 
 This sample skill uses:
 
@@ -15,7 +15,7 @@ This sample skill uses:
 * Code written in [Node.js](https://nodejs.org/en/) javascript, and using the [Alexa Skills Kit (ASK) SDK for Node.js](https://github.com/alexa/alexa-skills-kit-sdk-for-nodejs) library.
 
 ## Hello Buttons Skill Flow
-When the Hello Buttons skill begins, it will send [animation directives](https://developer.amazon.com/docs/gadget-skills/control-echo-buttons.html#animate) for the three possible trigger events (`buttonDown`, `buttonUp` and `none`) to all the Echo Buttons. Alexa will then ask you to press the buttons, and an audio file will play.
+When the Hello Buttons skill begins, it will send [animation directives](https://developer.amazon.com/docs/echo-button-skills/control-echo-buttons.html#animate) for the three possible trigger events (`buttonDown`, `buttonUp` and `none`) to all the Echo Buttons. Alexa will then ask you to press the buttons, and an audio file will play.
 
 When you press a button, the skill will interrupt Alexa's speech. If the button that you pressed is not awake, the skill will initialize the button by sending animation directives for `buttonDown`, `buttonUp` and `none` to that button. This is different from the original `LaunchRequest` intent, which sent initialization directives to all buttons.
 

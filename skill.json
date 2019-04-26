@@ -9,11 +9,11 @@
               "Alexa, launch hello buttons"
             ],
             "keywords": [
-              "Alexa Gadgets API",
+              "Echo Buttons API",
               "Echo Buttons"        
             ],            
             "name": "hello buttons",
-            "description": "This is an example skill to show how to use the Alexa Gadgets API"
+            "description": "This is an example skill to show how to use the Echo Buttons API"
           }
         },
         "isAvailableWorldwide": true,

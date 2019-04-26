@@ -6,7 +6,7 @@
 
 At this point, you should have a working copy of our Hello Buttons skill.
 You may modify the code in the ```index.js```.
-For example, locate the line with the response: "Welcome to the Gadgets Test Skill.".
+For example, locate the line with the response: "Welcome to the Echo Buttons Test Skill.".
 Change this to a custom message, and save your code.  Then, test your skill again and you should hear a new response.
 
 Normally, you would consider submitting your skill for certification.  But, a default "hello world" skill is too simple to provide a valuable end user experience.

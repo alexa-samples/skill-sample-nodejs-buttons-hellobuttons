@@ -9,7 +9,7 @@
     or implied. See the License for the specific language governing
     permissions and limitations under the License.
 
-    Gadgets Test Skill opens with buttons roll call and asks the user to
+    This sample skill opens with buttons roll call and asks the user to
     push two buttons. On button one press, she changes the color to red and on
     button two press she changes the color to blue. Then closes. This Skill
     demonstrates how to send directives to, and receive events from, Echo Buttons.
@@ -58,7 +58,7 @@ const main = {
       
       // Build a basic response and have Alexa say something in the standard way.
       let response = handlerInput.responseBuilder
-        .speak("Welcome to the Gadgets Test Skill. " + 
+        .speak("Welcome to the Buttons Test Skill. " + 
                "Press your Echo Buttons to change the colors of the lights. " + 
                "<audio src='https://s3.amazonaws.com/ask-soundlibrary/foley/amzn_sfx_rhythmic_ticking_30s_01.mp3'/>")
         .getResponse();
@@ -72,7 +72,7 @@ const main = {
         pressed and when they're released.
         After 30 seconds, the Skill will receive the timeout event.
         For more details on InputHandlers, see
-        https://developer.amazon.com/docs/gadget-skills/define-echo-button-events.html
+        https://developer.amazon.com/docs/echo-button-skills/define-echo-button-events.html
       */
       response.directives.push(buttonStartInputHandlerDirective);        
       
@@ -81,7 +81,7 @@ const main = {
       /*
         Preserve the originatingRequestId.  We'll use this to stop the
         InputHandler later.
-        See the Note at https://developer.amazon.com/docs/gadget-skills/receive-echo-button-events.html#start
+        See the Note at https://developer.amazon.com/docs/echo-button-skills/receive-echo-button-events.html#start
       */
       sessionAttributes.CurrentInputHandlerID = requestEnvelope.request.requestId;      
  
@@ -105,7 +105,7 @@ const main = {
          voice intent.
          Never set `shouldEndSession` to true if you're expecting InputHandler
          events Because you'll lose the session!
-         See https://developer.amazon.com/docs/gadget-skills/receive-voice-input.html#types
+         See https://developer.amazon.com/docs/echo-button-skills/receive-voice-input.html#types
       */
       delete response.shouldEndSession;
 
@@ -139,7 +139,7 @@ const main = {
     handle(handlerInput) {
       console.log("Global.HelpIntentHandler: handling request for help");   
       var response = handlerInput.responseBuilder
-        .speak("Welcome to the Gadgets Test Skill. " + 
+        .speak("Welcome to the Buttons Test Skill. " + 
                 "Press your Echo Buttons to change the lights. " + 
                 "<audio src='https://s3.amazonaws.com/ask-soundlibrary/foley/amzn_sfx_rhythmic_ticking_30s_01.mp3'/>")
         .getResponse();
@@ -414,11 +414,11 @@ const main = {
    Build a 'button down' animation directive.
    The animation will overwrite the default 'button down' animation.
  */
- const buildButtonDownAnimationDirective = function(targetGadgets) {
+ const buildButtonDownAnimationDirective = function(targetButtons) {
    return {
      "type": "GadgetController.SetLight",
      "version": 1,
-     "targetGadgets": targetGadgets,
+     "targetGadgets": targetButtons,
      "parameters": {
        "animations": [{
          "repeat": 1,
@@ -436,11 +436,11 @@ const main = {
  };
 
  // Build a 'button up' animation directive.
- const buildButtonUpAnimationDirective = function(targetGadgets) {
+ const buildButtonUpAnimationDirective = function(targetButtons) {
    return {
      "type": "GadgetController.SetLight",
      "version": 1,
-     "targetGadgets": targetGadgets,
+     "targetGadgets": targetButtons,
      "parameters": {
        "animations": [{
          "repeat": 1,
@@ -458,11 +458,11 @@ const main = {
  };
 
  // Build an idle animation directive.
- const buildButtonIdleAnimationDirective = function(targetGadgets, animation) {
+ const buildButtonIdleAnimationDirective = function(targetButtons, animation) {
    return {
      "type": "GadgetController.SetLight",
      "version": 1,
-     "targetGadgets": targetGadgets,
+     "targetGadgets": targetButtons,
      "parameters": {
        "animations": [{
          "repeat": 100,
